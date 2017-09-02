@@ -14,10 +14,34 @@
     "react-scripts-ts": "2.6.0",
     "redux": "^3.7.2"
   },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testMatch": [
+      "**/src/**/*.test.ts?(x)"
+    ],
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/**/*.test.ts?(x)"
+    ]
+  },
   "scripts": {
     "start": "react-scripts-ts start",
     "build": "react-scripts-ts build",
     "test": "react-scripts-ts test --env=jsdom",
+    "jest": "jest",
     "eject": "react-scripts-ts eject"
+  },
+  "devDependencies": {
+    "@types/enzyme": "^2.8.6",
+    "enzyme": "^2.9.1",
+    "react-addons-test-utils": "^15.6.0",
+    "ts-jest": "^20.0.14"
   }
 }
